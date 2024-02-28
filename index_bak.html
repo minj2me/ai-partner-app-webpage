@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI乐翻天App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            /*width: calc(33.333% - 20px);*/
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+        }
+
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #007bff;
+        }
+
+        .card-image {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: calc(100%);
+        }
+
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .card-description {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>欢迎来到AI乐翻天App主页</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="features">
+            <div class="card">
+                <h2 class="card-title">人物角色选择</h2>
+                <img src="./public/image/1.jpg" class="card-image"/>
+            </div>
+            <div class="card">
+                <h2 class="card-title">与你有聊不完的话题</h2>
+                <img src="./public/image/2.jpg" class="card-image"/>
+            </div>
+            <div class="card">
+                <h2 class="card-title">好玩的接龙游戏</h2>
+                <img src="./public/image/3.jpg" class="card-image"/>
+            </div>
+            <div class="card">
+                <h2 class="card-title">好玩的接字游戏</h2>
+                <img src="./public/image/4.jpg" class="card-image"/>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

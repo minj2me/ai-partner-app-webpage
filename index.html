@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,28 +9,78 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
-            color: #333;
+            line-height: 1.6;
         }
-
         .container {
-            max-width: 1200px;
+            width: 80%;
             margin: auto;
-            padding: 0 20px;
+            overflow: hidden;
         }
-
-        .header {
-            background: #007bff;
+        header {
+            background: #333;
             color: #fff;
-            padding: 20px 0;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #bbb 1px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header ul li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .showcase {
+            min-height: 400px;
+            background: url('showcase.jpg') no-repeat 0 0;
             text-align: center;
+            color: #fff;
+        }
+        .showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        .showcase p {
+            font-size: 20px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
         }
 
         .features {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            padding: 20px 0;
+            padding: 5px 0;
         }
 
         .card {
@@ -68,45 +117,69 @@
             line-height: 1.6;
             text-align: center;
         }
-
-        @media (max-width: 768px) {
-            .features {
-                flex-direction: column;
-            }
-
-            .card {
-                width: 100%;
-            }
-        }
     </style>
 </head>
-
 <body>
-    <div class="header">
+    <header>
         <div class="container">
-            <h1>欢迎来到AI乐翻天App主页</h1>
+            <div id="branding">
+                <h1>AI乐翻天</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#showcase">主页</a></li>
+                    <li><a href="#about">关于</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-    <div class="container">
-        <div class="features">
-            <div class="card">
-                <h2 class="card-title">人物角色选择</h2>
-                <img src="./public/image/1.jpg" class="card-image"/>
-            </div>
-            <div class="card">
-                <h2 class="card-title">与你有聊不完的话题</h2>
-                <img src="./public/image/2.jpg" class="card-image"/>
-            </div>
-            <div class="card">
-                <h2 class="card-title">好玩的接龙游戏</h2>
-                <img src="./public/image/3.jpg" class="card-image"/>
-            </div>
-            <div class="card">
-                <h2 class="card-title">好玩的接字游戏</h2>
-                <img src="./public/image/4.jpg" class="card-image"/>
-            </div>
-        </div>
-    </div>
-</body>
+    </header>
 
+    <section id="showcase">
+        <div class="container">
+            <h1>令人愉悦的应用</h1>
+            <div class="features">
+                <div class="card">
+                    <h2 class="card-title">聊天人物选择</h2>
+                    <img src="./public/image/1.jpg" class="card-image"/>
+                </div>
+                <div class="card">
+                    <h2 class="card-title">聊不完的话题</h2>
+                    <img src="./public/image/2.jpg" class="card-image"/>
+                </div>
+                <div class="card">
+                    <h2 class="card-title">好玩的接龙游戏</h2>
+                    <img src="./public/image/3.jpg" class="card-image"/>
+                </div>
+                <div class="card">
+                    <h2 class="card-title">好玩的接字游戏</h2>
+                    <img src="./public/image/4.jpg" class="card-image"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>关于我们的应用</h2>
+        <p>畅聊驾途，智能伴侣——「AI乐翻天」车载娱乐APP。</p>
+        <p>与AI深度对话，享受个性化娱乐体验；趣味互动、资讯共享，让每次出行不再孤单。</p>
+        <p>轻松愉悦，开启智慧旅程。</p>
+    </section>
+
+    <section id="about" class="container">
+        <h2>用户协议</h3>
+        <p>使用本应用即表示您同意我们的条款和条件。请仔细阅读我们的<a href="user-agreement.html">用户协议</a>。</p>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>联系方式</h2>
+        <p>如果您有任何问题或反馈，请随时<a href="mailto:zmq13@163.com">联系我们</a>。</p>
+    </section>
+
+    <footer>
+        <p>版权所有 &copy; 2024 AI乐翻天。保留所有权利。</p>
+        <p>网站由广州东湾科技有限公司提供</p>
+        <p>备案信息: 粤ICP备2024178733号-1</p>
+    </footer>
+</body>
 </html>
